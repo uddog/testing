@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden; /* Disable horizontal scrollbar */
+        }
+
+        .parallax-section {
+            height: 100vh; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; /* Text color for better contrast */
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #section1 {
+            background: url(https://i.pinimg.com/564x/32/44/37/324437fd4d4de973df5e751a7491553d.jpg) center/cover fixed;
+        }
+
+        #section2 {
+            background: url(https://i.pinimg.com/474x/7b/7c/fc/7b7cfc41a5db7ea51831f8356b0fb4e2.jpg) center/cover fixed;
+        }
+
+        #section3 {
+            background: url(https://i.pinimg.com/564x/cb/71/a0/cb71a0f32a2cd25f12872447b4c58d7a.jpg) center/cover fixed;
+        }
+
+        #section4 {
+            background: url(https://i.pinimg.com/564x/87/f5/fc/87f5fcf6d42350f04fd8f1f2773c8d2f.jpg) center/cover fixed;
+        }
+
+        #section5 {
+            background: url(https://i.pinimg.com/474x/25/c5/bb/25c5bb377d3b5f2b222d9fa3a85d5562.jpg) center/cover fixed;
+        }
+
+        .parallax-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+            z-index: -1;
+        }
+
+        .section-name {
+            font-size: 3em;
+            margin: 0;
+            z-index: 1;
+            position: relative;
+        }
+
+        @media screen and (max-width: 600px) {
+            .section-name {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <title>Your Enhanced Parallax Website</title>
+</head>
+<body>
+
+    <section class="parallax-section" id="section1">
+        <h1 class="section-name" data-speed="0.5">Section 1</h1>
+    </section>
+
+    <section class="parallax-section" id="section2">
+        <h1 class="section-name" data-speed="0.5">Section 2</h1>
+    </section>
+
+    <section class="parallax-section" id="section3">
+        <h1 class="section-name" data-speed="0.5">Section 3</h1>
+    </section>
+
+    <section class="parallax-section" id="section4">
+        <h1 class="section-name" data-speed="0.5">Section 4</h1>
+    </section>
+
+    <section class="parallax-section" id="section5">
+        <h1 class="section-name" data-speed="0.5">Section 5</h1>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            let scrollPosition = window.scrollY;
+            document.getElementById('section1').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+            document.getElementById('section2').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+            document.getElementById('section3').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+            document.getElementById('section4').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+            document.getElementById('section5').style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
+
+            // Text Parallax
+            let sections = document.querySelectorAll('.parallax-section');
+            sections.forEach(function(section) {
+                let speed = section.querySelector('.section-name').getAttribute('data-speed');
+                section.querySelector('.section-name').style.transform = `translateY(${scrollPosition * speed}px)`;
+            });
+        });
+    </script>
+
+</body>
+</html>

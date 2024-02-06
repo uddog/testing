@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'anik';
+    src: url(/Font/anik.ttf);
+}
+@font-face {
+    font-family: 'font1';
+    src: url(/Font/font1.ttf);
+ }
+ @font-face {
+    font-family: 'font2';
+    src: url(/Font/font2.ttf);
+ }
+ @font-face {
+    font-family: 'font3';
+    src: url(/Font/font3.ttf);
+ }
+@media only screen and (min-width: 600px) {
+    body{
+        display: none;
+    }
+}
+:root{
+    --text-color1: black;
+    --back-color: white;
+}
+*{
+    margin: 0 ;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
