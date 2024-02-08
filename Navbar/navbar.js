@@ -93,10 +93,10 @@ async function displayUserProfile(rowIndex, userPassword, navbar) {
                     addAdminButton('Udrita', 'https://kilt-bluefish.cyclic.app/'); // Set the link for Admin 1
                     break;
                  case '3':
-                    addAdminButton('Search', '/admin0.html'); // Set the link for Admin 1
-                    addAdminButton('Access Pro', '/admin2.html'); // Set the link for Admin 2
-                    addAdminButton('Access', '/admin1.html'); // Set the link for Admin 1
-                    addAdminButton('Admin', '/admin3.html'); // Set the link for Admin 1
+                    addAdminButton('Search', './admin0.html'); // Set the link for Admin 1
+                    addAdminButton('Access Pro', './admin2.html'); // Set the link for Admin 2
+                    addAdminButton('Access', './admin1.html'); // Set the link for Admin 1
+                    addAdminButton('Admin', './admin3.html'); // Set the link for Admin 1
                     addAdminButton('Udrita', 'https://kilt-bluefish.cyclic.app/'); // Set the link for Admin 1
                     break;
                 // Add more cases as needed
